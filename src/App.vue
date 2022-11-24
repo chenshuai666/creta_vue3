@@ -1,31 +1,42 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div id="app">
+    <headere></headere>
+    <router-link to="/home"></router-link>
+    <router-link to="/faq"></router-link>
+    <router-view></router-view>
+    <footere></footere>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
+<script setup>
+import headere from './components/header.vue'
+import footere from './components/footer.vue'
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+*, body {
+    -webkit-tap-highlight-color: transparent;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+body {
+    font-size: .83333vw;
+    font-family: PingFang SC,Avenir,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    color: #2c3e50;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-feature-settings: none;
+    font-feature-settings: none;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 </style>

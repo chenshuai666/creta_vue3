@@ -1,5 +1,13 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import router from './router/index'
+//import directives from './directives'
+import lazyload from './directives/lazyload.js'
+import loading from './assets/loading.svg'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+//directives(app)
+app.use(lazyload, {
+    default: loading
+})
+app.use(router).mount('#app')
