@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div>jenkins</div>
     <headere></headere>
     <router-link to="/home"></router-link>
     <router-link to="/faq"></router-link>
