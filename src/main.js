@@ -8,6 +8,6 @@ import loading from './assets/loading.svg'
 const app = createApp(App)
 //directives(app)
 app.use(lazyload, {
-    default: loading
+  default: loading
 })
 app.use(router).mount('#app')
